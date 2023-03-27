@@ -11,7 +11,7 @@
  --font-xl: clamp(2rem, 4vw + 2rem, 9rem);
   --font-lg: clamp(1rem, 2vw + 1rem, 3rem);
   --font-md: 1.8rem;
-  --font-sm: 1.4rem;
+  --font-sm: 1.2rem;
     
 
   --gap-lg: 2vw;
@@ -202,7 +202,7 @@ html{   /* now 10px ==> 1rem */
 
 .blog-item .sub-title{
    font-family: var(--mont-heavy);
-   font-size: 1.8rem;
+   font-size: var(--font-md);
    text-align: center;
    padding: 1rem 0;
 }
@@ -212,7 +212,20 @@ html{   /* now 10px ==> 1rem */
    text-align: center;
 }
 
+.blog-item a {
+  text-decoration: none;
+  color: var(--color-dark);
+  position: relative;
+  font-size: var(--font-sm);
+  margin: 3rem;
+  display: block;
+  font-family: var(--mont-heavy);
+}
 
+.blog-item span{
+ position: absolute;
+ top: -.4rem;
+} 
 
   @font-face{
       font-family: Montheavy;
