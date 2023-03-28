@@ -1,26 +1,24 @@
 
 :root{
   --page-width: 95%;
+
   --color-dark:      #000;
   --color-white:     #FFF;
   --color-primary:   #efe7dc;
-  --color-secondary: #f7f7f7;
   --color-danger:    #b12704;
-  --color-success:   #2a8703;
 
  --font-xl: clamp(2rem, 4vw + 2rem, 9rem);
   --font-lg: clamp(1rem, 2vw + 1rem, 3rem);
   --font-md: 1.8rem;
   --font-sm: 1.2rem;
     
-
-  --gap-lg: 2vw;
+  --gap-lg: 4rem;
   --gap-md: 1rem;
 
-  --mont-heavy:   Montheavy,   Montserrat, sans-serif;
+  --mont-heavy: Montheavy, Montserrat, sans-serif;
   --mont-regular: Montregular, Montserrat, sans-serif;
-  --mont-light:   Montlight,   Montserrat, sans-serif;
-  --mont-semi-bold:   Montsemibold,   Montserrat, sans-serif;
+  --mont-light: Montlight, Montserrat, sans-serif;
+  --mont-semi-bold: Montsemibold, Montserrat, sans-serif;
 }
 
 
@@ -43,7 +41,7 @@ html{   /* now 10px ==> 1rem */
 .hero{
     background-image: url('https://www.matrix.com/-/media/project/loreal/brand-sites/matrix/americas/us_usmx/blog-information/blogs/medium-hairstyles/cute-and-trendy-medium-length-hairstyles/choppy-ends.jpg?sc_lang=en-us&rev=5859e8d87cfb4f4f894d3da708370120');
     background-repeat: no-repeat;
-    height: 90vh;
+    height: fit-content;
     background-size: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -84,6 +82,9 @@ html{   /* now 10px ==> 1rem */
 .btn-owner{
     padding: 1rem 3rem;
     font-size: var(--font-lg);
+}
+
+.btn{
     display: block;
     text-transform: uppercase;
     font-weight: bold;
@@ -94,7 +95,7 @@ html{   /* now 10px ==> 1rem */
     color: var(--color-white);
 }
 
-.btn-owner:hover{
+.btn:hover{
     background-color: var(--color-white);
     color: var(--color-dark);
 }
@@ -219,7 +220,7 @@ html{   /* now 10px ==> 1rem */
   font-size: var(--font-sm);
   margin: 3rem;
   display: block;
-  font-family: var(--mont-heavy);
+  font-family: var(--mont-light);
 }
 
 .blog-item span{
@@ -227,6 +228,196 @@ html{   /* now 10px ==> 1rem */
  top: -.4rem;
 } 
 
+
+/*Media Queries*/
+@media (max-width: 1500px){
+    .hero-detail-wrapper .sub-title{
+       margin: 0; 
+   }
+   btn-owner{
+    margin: 0;
+   }
+}
+
+@media  (max-width: 1300px){
+    .hero-detail-wrapper .title{
+        font-size: clamp(2rem, 3.4vw + 2rem, 6rem);
+    }
+    .hero-detail-wrapper .sub-title{
+       font-size: clamp(1rem, 1.8vw + .5rem, 3rem);
+       margin: 3rem 0; 
+   }
+   
+   .hero{
+    height: fit-content;
+    background-size: 100%;
+  }
+  
+}
+
+
+
+@media  (max-width: 1250px){
+    :root{
+        --font-xl: clamp(2rem, 3vw + 1rem, 5rem);
+        --font-lg: clamp(1rem, 1vw + 1rem, 5rem);
+    }
+    .hero-detail-wrapper .title{
+        font-size: clamp(1.8rem, 3.2vw + 1rem, 6rem);
+    }
+    .hero-detail-wrapper .sub-title{
+       font-size: clamp(1rem, 1.8vw + .4rem, 3rem);
+       padding-right: 2rem;
+   }
+
+   .btn-owner{
+      padding-right: 2rem;
+      font-size: clamp(1rem, 1.8vw + .4rem, 3rem);
+   }
+   .product-item img{
+       height: 25rem
+   }
+  
+}
+
+
+@media  (max-width: 900px){
+    :root{
+       --gap-lg: 1.6rem;
+       --gap-md: 1.8rem; 
+       --font-md: 1rem;
+    }
+    .hero-detail-wrapper .title{
+        font-size: clamp(1.8rem, 3.2vw + 1rem, 6rem);
+    }
+    .hero-detail-wrapper .sub-title{
+       font-size: clamp(1rem, 1.8vw + .4rem, 3rem);
+       padding-right: 2rem;
+   }
+   
+   .btn-owner{
+      padding-right: 2rem;
+      font-size: clamp(1rem, 1.8vw + .4rem, 3rem);
+   }
+   .product-item img{
+       height: 20rem
+   }
+
+   .product-name {
+      font-size: 2rem;
+    } 
+
+    .product{
+       margin: 0;
+    }
+    .product .product-title, .feature-blogs .title{ 
+       margin: 2rem 0 1rem;
+    }
+
+    .product .product-subtitle{
+        margin: 2rem 0; 
+    }
+  
+}
+
+@media (max-width:850px){
+    :root{
+     --page-width:100%;
+     --gap-lg: 1.3rem;
+     --gap-md: .5rem; 
+    }
+    .product{
+       margin: 0;
+    }
+    .product .product-title, .feature-blogs .title{ 
+       margin: 2rem 0 1rem;
+    }
+
+    .product .product-subtitle{
+        margin: 2rem 0; 
+    }
+}
+
+
+@media (max-width:800px){
+    :root{
+     --gap-lg: 1rem;
+     --gap-md: .3rem; 
+    }
+    .product{
+       margin: 0;
+    }
+    .product .product-title, .feature-blogs .title{ 
+       margin: 1rem 0 1rem;
+    }
+
+    .product .product-subtitle{
+        margin: 1rem; 
+    }
+
+    .hero-detail-wrapper .sub-title{
+       margin: 1rem 0; 
+   }
+
+   .hero-detail-wrapper .title{
+    margin: 2rem 0 2rem;
+  }
+}
+
+
+@media (max-width:750px){
+    .product-item{
+        padding: 2rem 0;
+    }
+
+    .product-item img{
+        height: 18rem;
+    }
+
+    .product-name {
+       font-size: 1.5rem;
+    }
+
+    .product-desc{
+       font-size: 1.2rem;
+       padding: 0 2rem; 
+    }
+
+    .blog-item .sub-title{
+       font-size: 1.3rem;
+       padding: 1rem 0;
+    }
+    .blog-item .blog-desc{
+       font-size: 1.1rem;
+    }
+}
+
+@media (max-width:620px){
+   .hero{
+        background: #d8d8d8;
+       grid-template-columns: 100%;
+       grid-template-rows: repeat(2, minmax(min-content, max-content));
+
+   }
+   .hero-detail-wrapper :not(.eyebrow){
+     text-align: center;
+   }
+  .hero-detail-wrapper .sub-title{
+    font-size: 1.8rem;
+  }
+   .product-wrapper{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    gap: 2rem;
+  }
+
+  .blog-wrapper{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-gap: var(--gap-lg);
+}
+
+}
   @font-face{
       font-family: Montheavy;
       src: url('https://waiz3ple.github.io/matrix/fonts/monts/mont-heavy-webfont.woff');
