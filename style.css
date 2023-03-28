@@ -394,7 +394,7 @@ html{   /* now 10px ==> 1rem */
 
 @media (max-width:620px){
    .hero{
-        background: #d8d8d8;
+       background: #d8d8d8;
        grid-template-columns: 100%;
        grid-template-rows: repeat(2, minmax(min-content, max-content));
 
@@ -415,7 +415,32 @@ html{   /* now 10px ==> 1rem */
     grid-template-columns: 100%;
     grid-template-rows: repeat(3, minmax(min-content, max-content));
     grid-gap: var(--gap-lg);
-}
+ }
+  
+  .hero-detail-wrapper{
+      padding: 3rem;
+  }
+
+  .hero-detail-wrapper .eyebrow{
+      padding: .5rem 1rem;
+      font-size: .8rem;
+
+  }
+  .hero-detail-wrapper .title{
+      font-size: var(--font-xl);
+      line-height: 100%;
+      margin: 3rem 0 4rem;
+  }
+
+  .hero-detail-wrapper .sub-title{
+      font-size: var(--font-lg);
+      line-height: 150%;
+      margin: 4rem 0; 
+  }
+
+  .btn-owner{
+      padding: 1rem 3rem;
+  }
 
 }
   @font-face{
